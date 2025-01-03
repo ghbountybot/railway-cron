@@ -1,0 +1,8 @@
+If lint errors:
+- first try just running `cargo clippy --fix --allow-dirty --allow-staged && cargo fmt`
+
+If adding a dependency
+- do not modify `Cargo.toml`; just run `cargo add <dependency1> <dependency2> ...`
+
+When debugging:
+- Use `tracing` crate (`tracing::debug!`, `tracing::trace!`) and `tracing-subscriber` to log messages. Run with `RUST_LOG=trace {cmd}` for best results.
